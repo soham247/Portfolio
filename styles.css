@@ -73,7 +73,7 @@ header {
 #home {
     display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #left img{
@@ -181,6 +181,8 @@ header {
     box-shadow: 0 0 4px var(--secondary-color2);
 }
 
+
+
 #socials {
     width: 25vw;
     padding-bottom: 3rem;
@@ -200,4 +202,50 @@ header {
 footer {
     text-align: center;
     margin: 1rem 0;
+}
+
+@media only screen and (max-width: 600px){
+    #navbar {
+        width: 100%;
+    }
+
+    .content {
+        width: 90vw;
+    }
+
+    #home{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #left, #right {
+        width: 90%;
+    }
+
+    #left {
+        margin: 2rem 0;
+    }
+
+    #skillset {
+        width: 80vw;
+        grid-template-columns: auto auto;
+    }
+
+    #project-container {
+        display: inline;
+    }
+
+    .project-subcontainer {
+        margin: 0 0 2rem 0;
+    }
+
+    #socials {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width: 900px) {
+    #socials {
+        width: 50%;
+    }
 }
