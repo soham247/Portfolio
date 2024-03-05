@@ -24,6 +24,7 @@ header {
     width: 100%;
     height: 10vh;
     background-color: var(--primary-color2);
+    z-index: 1;
 }
 
 #navbar{
@@ -139,15 +140,16 @@ header {
 }
 
 #project-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-subcontainer {
+    flex: 0 0 calc(33% - 2rem);
     text-align: center;
-    /* min-height: 250px; */
-    margin-left: 2rem;
+    margin: 0 0 2rem 2rem;
     background-color: #033751;
     border: 2px solid var(--primary-color2);
     border-radius: 1rem;
@@ -247,5 +249,14 @@ footer {
 @media only screen and (min-width:600px) and (max-width: 900px) {
     #socials {
         width: 50%;
+    }
+
+    #project-container {
+        width: 100%;
+    }
+
+    .project-subcontainer{
+        flex: 0 0 calc(50% - 1rem);
+        margin: 0 0 1rem 1rem;
     }
 }
